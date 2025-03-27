@@ -148,7 +148,7 @@ backend_update() {
   pm2 stop ${empresa_atualizar}-backend
   git pull
   cd /home/deploy/${empresa_atualizar}/backend
-  npm install
+  npm install --force
   npm update -f
   npm install @types/fs-extra
   rm -rf dist 
